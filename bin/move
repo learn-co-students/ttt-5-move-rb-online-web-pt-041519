@@ -2,4 +2,14 @@
 
 require_relative '../lib/move.rb'
 
-# Code your CLI Here
+board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+
+# Get input and convert to integer
+puts "Welcome to Tic Tac Toe!"
+puts "Please enter 1-9"
+input = gets.strip
+index = input_to_index(input)
+
+# Display result
+move(board, index, "X")
+display_board(board)
