@@ -7,3 +7,20 @@ def display_board(board)
 end
 
 # code your input_to_index and move method here!
+def input_to_index(string)
+string.to_i-1
+end
+
+#def update_array_at_with(array, index, value)
+#  array[index]=value
+#  return array
+#end
+board = [" ", " ", " "]
+def update_array_at_with(array, index, value)
+  array[index] = value
+end
+
+# takes the array update from above and turns it into a move on the tic tac toe board
+def move(board, index, char="X")
+  update_array_at_with(board, index, char)
+end
